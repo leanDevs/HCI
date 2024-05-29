@@ -1,0 +1,57 @@
+:root { 
+    --main-color: lightpink; 
+} 
+ 
+body { 
+    display: flex;     justify-content: center;     align-items: center;     height: 100vh; 
+    flex-direction: column; 
+} 
+ 
+.hover-button {     padding: 10px 20px;     border: none; 
+    background-color: var(--main-color);     color: white; 
+    transition: background-color 0.8s ease; 
+} 
+ 
+.hover-button:hover { 
+    background-color: green;
+    height: 5vh;
+    width: 300px;
+    transition-timing-function: linear;
+} 
+
+.animation-box-1 {
+ width: 200px;
+ height: 200px;
+ background-color: var(--main-color);
+ margin-top: 20px;
+ animation: box-move 2s infinite alternate;
+} 
+
+
+@keyframes box-move {
+ from {
+ 	transform: translateX(0);
+ }
+ to {
+ 	transform: translateX(360px);
+ }
+}
+
+
+
+.animation-box-2 {
+ width: 200px;
+ height: 200px;
+ background-color: var(--main-color);
+ margin-top: 20px;
+ animation: rotation 2s infinite linear;
+} 
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+} 
